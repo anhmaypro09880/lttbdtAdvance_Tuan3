@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-export default function App() {
+export default function Screen2({ route, navigation }) {
+    const { email } = route.params;
     return (
         <View style={[styles.container]}>
             <View
@@ -95,7 +96,7 @@ export default function App() {
                                 { fontSize: 23, color: "white" },
                             ]}
                         >
-                            Chọn mua
+                            Chọn mua {email}
                         </Text>
                     </TouchableOpacity>
                 </View>

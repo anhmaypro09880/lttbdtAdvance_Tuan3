@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import { useState } from "react";
 
-export default function App() {
+export default function Vsmart({ navigation }) {
     const [defaultRating, setDefultRating] = useState(3);
     const [maxRating, setmaxRating] = useState([1, 2, 3, 4, 5]);
 
@@ -96,6 +96,11 @@ export default function App() {
                             justifyContent: "center",
                         },
                     ]}
+                    onPress={() => {
+                        navigation.navigate("Screen2", {
+                            email: "testEmail",
+                        });
+                    }}
                 >
                     <Text>4-Màu chọn màu</Text>
                 </TouchableOpacity>
